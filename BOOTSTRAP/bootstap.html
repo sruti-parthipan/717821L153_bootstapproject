@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Blog</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">FOOOD MOOOD GOOOD MOOOD!!!!</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<header class="jumbotron jumbotron-fluid text-center">
+<div id="carouselExample" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://www.bypeople.com/wp-content/uploads/2018/09/stock-food-photos-bundle-bypeople-deals.png">
+        </div>
+        <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80">
+        </div>
+        <div class="carousel-item">
+            <img src="https://burst.shopifycdn.com/photos/flatlay-iron-skillet-with-meat-and-other-food.jpg?width=1200&format=pjpg&exif=1&iptc=1">
+        </div>
+    </div>
+</div>
+   <div class="container">
+        <h1>Welcome to Food Delights</h1>
+        <p>Exploring the world of delicious recipes</p>
+    </div>
+</header>
+
+<section id="recipes" class="container mt-5">
+    <div class="row">
+      <div class="col-md-4">
+            <div class="card">
+                <img src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?cs=srgb&dl=pexels-engin-akyurt-1437267.jpg&fm=jpg">
+                <div class="card-body">
+                    <h5 class="card-title">Delicious Pasta</h5>
+                    <p class="card-text">Learn how to make the perfect pasta with our step-by-step guide.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://content.jdmagicbox.com/comp/bangalore/w9/080pxx80.xx80.210921150331.n8w9/catalogue/barbeque-nation-doddakallasandra-bangalore-barbeque-restaurants-1w1t3lq37u.jpg">
+                    <h5 class="card-title">Homemade Pizza</h5>
+                    <p class="card-text">Create your own delicious pizza with our secret recipe.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://media.istockphoto.com/id/537522498/photo/freshly-blended-fruit-smoothies-of-various-colors-and-tastes.jpg?s=612x612&w=0&k=20&c=p-BeboePGQOBWVTCYETfCQzhMiOVyf2MVnSkV6aIUyQ=" class="card-img-top" alt="Card3">
+                    <h5 class="card-title">Berry Smoothie</h5>
+                    <p class="card-text">Enjoy a refreshing berry smoothie that's perfect for any time of the day.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel urna vel elit mollis venenatis. Fusce id malesuada eros.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2>Contact Us</h2>
+            <p>Have questions or suggestions? Feel free to reach out to us.</p>
+            <p>Email: contact@foodblog.com</p>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-dark text-white text-center py-3">
+   <p>&copy; 2023 Food Blog. All rights reserved.</p>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Smooth scroll to section when clicking on navigation links
+        $("a.nav-link").on("click", function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                const hash = this.hash;
+                $("html, body").animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function(){
+                    window.location.hash = hash;
+                });
+            }
+        });
+    });
+</script>
+</body>
+</html>
